@@ -1,20 +1,44 @@
-- name: "Open Research Toolkit"
-  description: "A reproducible pipeline for data ingestion, experiment tracking, and paper-ready plots."
-  role: "Lead developer"
+- name: "SNN-GNN Predictive Coding for MRI Representation Learning"
+  description: "Semi-supervised MRI framework using SNN-GNN gating with a SpikeFormer backbone to fuse supervised and unsupervised objectives for label-efficient predictive coding."
+  role: "Research"
   highlights:
-    - "Reduced experiment setup time from days to hours with standardized configs."
-    - "Automated LaTeX table and figure export for manuscripts."
-  tech: ["Python", "Docker", "MLflow"]
-  links:
-    github: "#"
-    demo: "#"
+    - "Improved representation learning under limited annotations and targeted edge-efficient inference."
+    - "Reduced compute / energy by 90% relative to the dense baseline."
+  tech: ["PyTorch", "SNN", "GNN", "SpikeFormer"]
+  links: {}
 
-- name: "Human-in-the-Loop Annotation Studio"
-  description: "Web app for rapid labeling with active learning and quality controls."
-  role: "Full-stack engineer"
+- name: "Self-Supervised Event-Camera Denoising with SNN-GNNs"
+  description: "Self-supervised denoising pipeline for raw 4-channel event-camera inputs using spiking and graph neural modules for edge-ready neuromorphic vision."
+  role: "Research"
   highlights:
-    - "Integrated uncertainty sampling and reviewer workflows."
-  tech: ["TypeScript", "React", "FastAPI"]
-  links:
-    github: "#"
-    paper: "#"
+    - "Achieved 97% denoising / reconstruction accuracy on held-out event streams."
+    - "Preserved temporal structure for low-power real-time perception."
+  tech: ["PyTorch", "SNN", "GNN", "Event Cameras"]
+  links: {}
+
+- name: "Content-Adaptive Neuromorphic Semantic Communication"
+  description: "SpikeAdapt-SC, an SNN-based semantic communication framework for aerial edge AI."
+  role: "Research"
+  highlights:
+    - "32–48% estimated computation energy savings via SynOps over MAC-based encoding."
+    - "Reduced payload from 64 KB to 48 KB per image (25% bandwidth savings) with zero accuracy penalty at ρ = 0.75."
+    - "Achieved 96.2% adaptive BSC accuracy vs. 95.8% fixed full-rate; >93% accuracy under severe conditions (BER = 0.3, SNR = −2 dB)."
+  tech: ["PyTorch", "SNN", "Edge AI", "Semantic Communication"]
+  links: {}
+
+- name: "PokeAgent Speedrun"
+  description: "Open-source Pokémon Emerald speedrunning agent with 4 agent scaffolds (four-module, simple, ReAct, ClaudePlays) and a multiprocess emulator/agent architecture for stable long-horizon execution."
+  role: "Open Source / Agent Systems"
+  highlights:
+    - "Documented lightweight simple pipeline runs 3–5× faster and retains the last 20 actions for compact action history."
+    - "Production-oriented execution paths including no-ocr mode and automated gameplay recording at 30 FPS."
+  tech: ["Python", "Agents", "LLMs"]
+  links: {}
+
+- name: "Omi Smart Glasses"
+  description: "Open-source AI wearable / smart-glasses platform spanning embedded systems, multimodal AI, and always-on human-centered assistance."
+  role: "Open Source / AI Wearables"
+  highlights:
+    - "Contributor to embedded and multimodal AI components."
+  tech: ["Embedded", "Multimodal AI", "Wearables"]
+  links: {}

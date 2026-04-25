@@ -1,7 +1,7 @@
 # Jekyll site config
 
-title: "Your Name"
-description: "Academic portfolio"
+title: "Jacky Li"
+description: "Edge AI, embedded systems, and software engineer"
 url: ""
 baseurl: ""
 
@@ -18,8 +18,6 @@ permalink: pretty
 nav:
   - title: "Home"
     url: "/"
-  - title: "Papers"
-    url: "/papers/"
   - title: "Projects"
     url: "/projects/"
   - title: "Experience"
@@ -29,15 +27,15 @@ nav:
 
 # Profile info
 profile:
-  name: "Your Name"
-  title: "PhD Candidate in Computer Science"
-  affiliation: "Your University"
-  email: "you@university.edu"
-  location: "City, Country"
-  website: "https://yourdomain.com"
-  github: "https://github.com/yourname"
+  name: "Jacky Li"
+  title: "Adjunct Lecturer & M.S. Student in Electrical Engineering"
+  affiliation: "Cal Poly Pomona"
+  email: "jackydli95@gmail.com"
+  location: "Pomona, CA"
+  website: "https://jpl11.github.io"
+  github: "https://github.com/JPL11"
   scholar: "https://scholar.google.com"
   headshot: "/assets/img/headshot.svg"
 
 # Footer
-footer_note: "Updated February 2026"
+footer_note: "Updated April 2026"

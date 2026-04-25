@@ -5,21 +5,22 @@ title: Home
 
 <section class="hero">
   <div class="hero-card">
-    <p class="eyebrow">Researcher · Builder · Collaborator</p>
+    <p class="eyebrow">Edge AI · Embedded Systems · Software Engineer</p>
     <h1>{{ site.profile.name }}</h1>
     <p class="lead">
-      {{ site.profile.title }} at {{ site.profile.affiliation }}. I design and deploy
-      human-centered AI systems with an emphasis on reliability, interpretability, and
-      real-world impact.
+      {{ site.profile.title }} at {{ site.profile.affiliation }}. I build on-device ML,
+      embedded firmware, real-time control, and AI-enabled user-facing applications —
+      with a focus on neuromorphic vision and edge-efficient inference.
     </p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="{{ '/resume/' | relative_url }}">Download CV</a>
+      <a class="btn btn-primary" href="{{ '/resume/' | relative_url }}">Download Resume</a>
       <a class="btn btn-ghost" href="mailto:{{ site.profile.email }}">Email</a>
-      <a class="btn btn-ghost" href="{{ site.profile.scholar }}">Scholar</a>
+      <a class="btn btn-ghost" href="{{ site.profile.github }}">GitHub</a>
     </div>
     <div class="callout">
-      Open to research collaborations, speaking invitations, and industry partnerships.
-      Reach me at <a href="mailto:{{ site.profile.email }}">{{ site.profile.email }}</a>.
+      Open to research collaborations and industry partnerships in edge AI, embedded
+      systems, and applied ML. Reach me at
+      <a href="mailto:{{ site.profile.email }}">{{ site.profile.email }}</a>.
     </div>
   </div>
   <aside class="hero-card profile-card">
@@ -28,55 +29,15 @@ title: Home
       <div><strong>Location:</strong> {{ site.profile.location }}</div>
       <div><strong>Website:</strong> <a href="{{ site.profile.website }}">{{ site.profile.website }}</a></div>
       <div><strong>GitHub:</strong> <a href="{{ site.profile.github }}">{{ site.profile.github }}</a></div>
-      <div><strong>Scholar:</strong> <a href="{{ site.profile.scholar }}">{{ site.profile.scholar }}</a></div>
+      <div><strong>Email:</strong> <a href="mailto:{{ site.profile.email }}">{{ site.profile.email }}</a></div>
     </div>
     <div class="tag-list">
-      <span class="tag">LLMs</span>
-      <span class="tag">HCI</span>
-      <span class="tag">ML Systems</span>
-      <span class="tag alt">Retrieval</span>
+      <span class="tag">Edge AI</span>
+      <span class="tag">Embedded</span>
+      <span class="tag">SNN / GNN</span>
+      <span class="tag alt">Neuromorphic Vision</span>
     </div>
   </aside>
-</section>
-
-<section class="section">
-  <div class="section-title">
-    <h2>Research Snapshot</h2>
-  </div>
-  <div class="stats-grid">
-    <div class="stat">
-      <div class="stat-number">12</div>
-      <div class="stat-label">Publications</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">4</div>
-      <div class="stat-label">Open-Source Tools</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">7</div>
-      <div class="stat-label">Industry Partners</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">3</div>
-      <div class="stat-label">Active Grants</div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-title">
-    <h2>Selected Papers</h2>
-    <a href="{{ '/papers/' | relative_url }}">View all</a>
-  </div>
-  <ul class="timeline">
-    {% for pub in site.data.publications limit:2 %}
-    <li>
-      <strong>{{ pub.title }}</strong><br>
-      {{ pub.authors }}<br>
-      <span class="card-meta">{{ pub.venue }} ({{ pub.year }})</span>
-    </li>
-    {% endfor %}
-  </ul>
 </section>
 
 <section class="section">
