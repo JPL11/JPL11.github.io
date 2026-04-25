@@ -10,9 +10,6 @@ permalink: /resume/
     <a class="btn btn-primary" href="{{ '/assets/resume.pdf' | relative_url }}">Download Resume (PDF)</a>
     <a class="btn btn-ghost" href="mailto:{{ site.profile.email }}">Request an updated copy</a>
   </p>
-  <p class="card-meta">
-    Replace <code>assets/resume.pdf</code> with your latest resume.
-  </p>
 </div>
 
 <div class="card" style="margin-top: 1.5rem;">
