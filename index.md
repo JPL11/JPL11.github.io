@@ -42,6 +42,25 @@ title: Home
 
 <section class="section">
   <div class="section-title">
+    <h2>Interactive Console</h2>
+    <span style="font-size:0.78rem;color:var(--dim);">optional — type <code>help</code></span>
+  </div>
+  <div class="terminal-widget" data-terminal data-base="{{ site.baseurl }}">
+    <div class="terminal-titlebar">
+      <span class="terminal-dots"><span></span><span></span><span></span></span>
+      <span class="terminal-title">visitor@jpl11: ~</span>
+      <span class="terminal-hint">try: help · projects · resume · contact</span>
+    </div>
+    <div class="terminal-body" aria-live="polite"></div>
+    <div class="term-input-row">
+      <span class="term-prompt">visitor@jpl11:~$</span>
+      <input class="term-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal input">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title">
     <h2>Featured Projects</h2>
     <a href="{{ '/projects/' | relative_url }}">View all</a>
   </div>
