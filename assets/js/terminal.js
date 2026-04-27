@@ -87,11 +87,11 @@
       contact: function () {
         write("Email   : <a href='mailto:jackydli95@gmail.com'>jackydli95@gmail.com</a>");
         write("Phone   : (424) 367-8040");
-        write("Location: Pomona, CA");
+        write("Location: Los Angeles, CA");
       },
       social: function () {
         write("GitHub  : <a href='https://github.com/JPL11' target='_blank' rel='noopener'>github.com/JPL11</a>");
-        write("LinkedIn: <a href='https://www.linkedin.com/' target='_blank' rel='noopener'>linkedin.com</a>");
+        write("LinkedIn: <a href='https://www.linkedin.com/jackypli' target='_blank' rel='noopener'>linkedin.com</a>");
       },
       clear: function () { body.innerHTML = ""; },
       ls: function () { commands.help(); },
