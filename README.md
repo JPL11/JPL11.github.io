@@ -1,26 +1,54 @@
 # JPL11.github.io
 
-Academic portfolio site built with Jekyll (al-folio-inspired).
+Personal portfolio site for **Jacky Li** — Edge AI, embedded systems, and software engineer. Built with Jekyll and styled as a terminal-themed UI with a conventional navigation rail.
 
-## Customize
+🌐 Live: [jpl11.github.io](https://jpl11.github.io)
 
-- Update profile details in `_config.yml`.
-- Edit content in `_data/publications.yml`, `_data/projects.yml`, `_data/experience.yml`.
-- Replace `assets/img/headshot.svg` with your photo.
-- Replace `assets/resume.pdf` with your resume PDF.
-- Tweak styling in `assets/css/main.css`.
+## Highlights
 
-## GitHub Pages
+- **Terminal aesthetic** — JetBrains Mono, dark GitHub-style palette, prompt-style headings, traffic-light card chrome, subtle scanline overlay.
+- **Standard navigation rail** — Home / Projects / Experience / Resume stays accessible to non-technical visitors (recruiters, collaborators).
+- **Interactive console widget** on the home page — type `help` to discover commands (`about`, `skills`, `projects`, `experience`, `resume`, `contact`, `social`, `clear`). Supports command history (↑/↓) and Ctrl+L. Every command mirrors a page reachable from the nav.
+- **Papers section** is temporarily disabled while manuscripts are in submission.
 
-### User site
-- Repo name: `yourname.github.io`
-- Set `baseurl: ""` in `_config.yml` (already default).
+## Structure
 
-### Project site
-- Repo name: any name, publish at `https://yourname.github.io/repo-name/`
-- Set `baseurl: "/repo-name"` in `_config.yml`.
+```
+_config.yml              # site metadata, nav, profile info
+_data/
+  experience.yml         # work history (rendered on /experience/)
+  projects.yml           # selected projects (rendered on /projects/)
+  publications.yml       # publications (currently empty — papers in submission)
+_includes/
+  head.html              # <head>, loads CSS + terminal.js
+  nav.html               # top navigation
+  footer.html
+_layouts/
+  default.html           # base layout
+  page.html              # inner page layout
+assets/
+  css/main.css           # terminal-themed styles
+  js/terminal.js         # interactive console widget
+  resume.pdf             # latest resume
+  img/headshot.svg
+index.md                 # home page (hero + console + featured sections)
+projects.md  experience.md  papers.md  resume.md
+```
 
-## Local preview (optional)
+## Updating content
+
+| Want to change…                | Edit                              |
+| ------------------------------ | --------------------------------- |
+| Name, title, email, links      | `_config.yml` → `profile`         |
+| Nav items                      | `_config.yml` → `nav`             |
+| Experience entries             | `_data/experience.yml`            |
+| Project entries                | `_data/projects.yml`              |
+| Publications (when ready)      | `_data/publications.yml` + `papers.md` |
+| Resume PDF                     | replace `assets/resume.pdf`       |
+| Console commands / responses   | `assets/js/terminal.js`           |
+| Visual theme                   | `assets/css/main.css`             |
+
+## Local preview
 
 ```bash
 bundle install
@@ -28,3 +56,11 @@ bundle exec jekyll serve
 ```
 
 Then open `http://localhost:4000`.
+
+## Deployment
+
+This is a GitHub Pages user site (`JPL11.github.io`) — pushing to `main` triggers an automatic rebuild. `baseurl` is left empty in `_config.yml`.
+
+## Credits
+
+Hand-built layout and terminal theme. Inspired in spirit by terminal-portfolio aesthetics, but designed as a hybrid so non-technical visitors can navigate without typing a single command.
