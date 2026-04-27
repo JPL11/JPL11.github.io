@@ -153,7 +153,33 @@
     setTimeout(function () { input.focus({ preventScroll: true }); }, 200);
   }
 
+  function autoScrollToConsole() {
+    if (window.location.hash) return;
+    var target = document.querySelector("[data-autoscroll]");
+    if (!target) return;
+    var nav = (performance.getEntriesByType && performance.getEntriesByType("navigation")[0]) || {};
+    if (nav.type && nav.type !== "navigate") return;
+    if (window.scrollY > 4) return; // user already scrolled — don't fight them
+
+    var userInterrupted = false;
+    var onIntr = function () { userInterrupted = true; };
+    window.addEventListener("wheel", onIntr, { passive: true, once: true });
+    window.addEventListener("touchstart", onIntr, { passive: true, once: true });
+    window.addEventListener("keydown", onIntr, { once: true });
+
+    setTimeout(function () {
+      if (userInterrupted) return;
+      var header = document.querySelector(".site-header");
+      var offset = (header ? header.offsetHeight : 0) + 8;
+      var y = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, left: 0, behavior: "smooth" });
+    }, 350);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("[data-terminal]").forEach(init);
+    if (document.querySelector("[data-autoscroll]")) {
+      window.addEventListener("load", autoScrollToConsole);
+    }
   });
 })();
