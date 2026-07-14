@@ -7,13 +7,32 @@
   tech: ["PyTorch", "SNN", "GNN", "SpikeFormer"]
   links: {}
 
-- name: "Self-Supervised Event-Camera Denoising with SNN-GNNs"
-  description: "Self-supervised denoising pipeline for raw 4-channel event-camera inputs using spiking and graph neural modules for edge-ready neuromorphic vision."
+- name: "EvCorrupt-Bench: Runtime Corruption Detection for Event Cameras"
+  description: "A benchmark and monitor study for detecting sensor corruption in event-camera streams at runtime: six physically modeled failure modes (leak-event hot pixels, mains flicker, activity bursts, dead regions, readout congestion, polarity faults) injected as timed episodes into 42 recordings across four sensor families, with leakage-safe injection and false-alarm-budgeted evaluation. In submission."
+  role: "Research (first author)"
+  highlights:
+    - "Grew out of a self-supervised SNN-GNN event denoiser (97% reconstruction accuracy), which now serves as label source and fallback action."
+    - "Injection pipeline released as the open-source `evlab` package (pip install evlab): reproducible recipes, per-event ground truth, clock-quantum snapping."
+  tech: ["PyTorch", "Event Cameras", "SNN", "Benchmarking"]
+  links:
+    github: "https://github.com/JPL11/evlab"
+
+- name: "SpikeGuard-RC: Spiking Reservoir Safety Monitoring (in progress)"
+  description: "An always-on spiking reservoir that maintains a compact temporal memory over windowed event-stream features and predicts safe / unsafe / uncertain, gating downstream perception: continue, abstain, or fall back to denoising. Targeting a computer-vision venue submission."
   role: "Research"
   highlights:
-    - "Achieved 97% denoising / reconstruction accuracy on held-out event streams."
-    - "Preserved temporal structure for low-power real-time perception."
-  tech: ["PyTorch", "SNN", "GNN", "Event Cameras"]
+    - "Corruption-injected freeway benchmark with exact onsets for AUROC and time-to-detection; UAV streams as real-world transfer test."
+    - "Compared against rule-based, MLP, GRU, LSTM, and non-spiking ESN baselines on detection quality, RAM, latency, and spike-rate energy proxy."
+  tech: ["SNN", "Reservoir Computing", "Event Cameras", "Edge AI"]
+  links: {}
+
+- name: "Cosmic-Ray Edge AI on CosmicWatch / CREDO Networks"
+  description: "Exploratory edge-AI pipeline over muon-detector networks: mining coincident CosmicWatch events from the CREDO Elasticsearch archive, building event features, and prototyping tiny MLP / SNN classifiers and a simulation-based GNN for multi-detector fusion, toward federated learning across distributed low-cost detectors."
+  role: "Research"
+  highlights:
+    - "Data-readiness tooling for detector uptime, gaps, and coincidence mining across the network archive."
+    - "On-detector-scale models: tiny MLP and pure-PyTorch SNN baselines; GNN prototype for synchronized multi-node fusion."
+  tech: ["PyTorch", "SNN", "GNN", "Elasticsearch", "Physics"]
   links: {}
 
 - name: "Content-Adaptive Neuromorphic Semantic Communication"
