@@ -1,0 +1,46 @@
+packages:
+  - name: "quantcard"
+    tagline: "Quantization report cards for PyTorch models headed to the edge."
+    install: "pip install quantcard"
+    description: "One command benchmarks a model across torchao quantization configs (int8/int4 weight-only, dynamic-activation combos, the ExecuTorch 8da4w recipe, QAT prepare) and reports accuracy delta, weight size, and latency as a single table."
+    tech: ["PyTorch", "torchao", "ExecuTorch", "Quantization"]
+    links:
+      github: "https://github.com/JPL11/quantcard"
+      pypi: "https://pypi.org/project/quantcard/"
+
+  - name: "evlab"
+    tagline: "Inspect, clean, convert, and benchmark event-camera data from the command line."
+    install: "pip install evlab"
+    description: "Normalizes the event-vision preprocessing mess: loads AEDAT4, Prophesee .dat, ROS bags, NPZ/CSV into one canonical form; BAF/refractory denoising; voxel grids, time surfaces, frames; synthetic labeled streams with precision/recall scoring of denoising filters."
+    tech: ["Python", "Event Cameras", "Neuromorphic", "NumPy"]
+    links:
+      github: "https://github.com/JPL11/evlab"
+      pypi: "https://pypi.org/project/evlab/"
+
+contributions:
+  - project: "Binaryen (WebAssembly optimizer)"
+    summary: "Three merged PRs in the MemoryPacking pass and interpreter, plus a six-year-old issue closed with a measurement study."
+    highlights:
+      - "Taught MemoryPacking to optimize overlapping (trampled) data segments instead of giving up, then extended it to imported memories with a provable no-trap bounds analysis."
+      - "Found and fixed a pre-existing memory64 miscompile (32-bit truncation silently deleted instantiation traps) and a fuzzer-reported interpreter bug where a maximal memory64's byte size wrapped to zero."
+      - "Resolved issue #3029 by measuring six real binaries across three toolchains and showing the proposed optimization had no remaining value; the maintainer closed it citing the data."
+    links:
+      prs: "https://github.com/WebAssembly/binaryen/pulls?q=is%3Apr+author%3AJPL11"
+
+  - project: "SpikingJelly (spiking neural network framework)"
+    summary: "Three merged PRs fixing autograd-graph memory leaks in the STDP learning rules."
+    highlights:
+      - "STDP/MSTDP learners retained the network's autograd graph across batches (issue #576): ~70 MB and hundreds of tensors leaked per run in hyperparameter searches. Detaching at record time made memory flat, with regression tests proving the update numerics are unchanged."
+      - "Closed the remaining leak path where a graph-connected reward tensor re-entered the weight update in reward-modulated STDP."
+    links:
+      prs: "https://github.com/fangwei123456/spikingjelly/pulls?q=is%3Apr+author%3AJPL11"
+
+  - project: "In review"
+    summary: "Open PRs across the edge-AI compiler and runtime stack."
+    highlights:
+      - "PyTorch ExecuTorch: insert buffer write-back copies at the earliest safe point in the exir memory-planning pipeline, with alias-aware placement (#20744)."
+      - "IREE: replace the VM's hand-rolled liveness dataflow with upstream MLIR Liveness, fixing two latent crashes found along the way (#24687)."
+      - "snnTorch: preserve float64 across neuron modules and fix NaN gradients in the sigmoid surrogate (#432, #433)."
+      - "openpilot: MetaDrive simulator and CI fixes for fork runners (#38285, #38286)."
+    links:
+      prs: "https://github.com/pulls?q=is%3Apr+author%3AJPL11+is%3Aopen"
