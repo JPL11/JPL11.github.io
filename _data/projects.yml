@@ -54,10 +54,3 @@
   tech: ["Python", "Agents", "LLMs"]
   links: {}
 
-- name: "Omi Smart Glasses"
-  description: "Open-source AI wearable / smart-glasses platform spanning embedded systems, multimodal AI, and always-on human-centered assistance."
-  role: "Open Source / AI Wearables"
-  highlights:
-    - "Contributor to embedded and multimodal AI components."
-  tech: ["Embedded", "Multimodal AI", "Wearables"]
-  links: {}
