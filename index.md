@@ -49,7 +49,7 @@ title: Home
     <div class="terminal-titlebar">
       <span class="terminal-dots"><span></span><span></span><span></span></span>
       <span class="terminal-title">visitor@jpl11: ~</span>
-      <span class="terminal-hint">try: help · projects · resume · contact</span>
+      <span class="terminal-hint">try: module avail · squeue · git log · help</span>
     </div>
     <div class="terminal-body" aria-live="polite"></div>
     <div class="term-input-row">
