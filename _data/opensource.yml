@@ -39,7 +39,6 @@ contributions:
     summary: "Open PRs across the edge-AI compiler and runtime stack."
     highlights:
       - "PyTorch ExecuTorch: insert buffer write-back copies at the earliest safe point in the exir memory-planning pipeline, with alias-aware placement (#20744)."
-      - "IREE: replace the VM's hand-rolled liveness dataflow with upstream MLIR Liveness, fixing two latent crashes found along the way (#24687)."
       - "snnTorch: preserve float64 across neuron modules and fix NaN gradients in the sigmoid surrogate (#432, #433)."
       - "openpilot: MetaDrive simulator and CI fixes for fork runners (#38285, #38286)."
     links:
