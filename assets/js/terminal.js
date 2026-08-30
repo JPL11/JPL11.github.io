@@ -209,7 +209,9 @@
 
       git: function (args) {
         if ((args[0] || "") !== "log") { write("git: try 'git log'", "err"); return; }
-        write("commit db30c15 (WebAssembly/binaryen)  MemoryPacking: optimize overlapping", "out");
+        write("commit  #432   (snnTorch)              fix: preserve input dtype in neuron", "out");
+        write("                                       modules and surrogate gradients");
+        write("commit db30c15 (WebAssembly/binaryen)  MemoryPacking: optimize overlapping");
         write("                                       segments on imported memories");
         write("commit 99f6fc6 (WebAssembly/binaryen)  Report a host limit for memories too");
         write("                                       large for the shell to allocate");
@@ -247,7 +249,7 @@
         write("        Host    : GitHub Pages, free tier, proudly");
         write("        Kernel  : vanilla JS, no build step");
         write("        Uptime  : teaching since 2024, researching since 2023");
-        write("        Packages: 2 (pip) + 6 merged PRs (upstream)");
+        write("        Packages: 2 (pip) + 7 merged PRs (upstream)");
         write("        Shell   : this one");
         write("        GPU     : whatever SLURM grants today");
       },
