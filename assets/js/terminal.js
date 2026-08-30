@@ -103,7 +103,7 @@
         write("  WebAssembly/binaryen — 3 PRs (MemoryPacking optimizations, fuzzer fix)");
         write("  SpikingJelly         — 3 PRs (STDP autograd memory leaks, ~70 MB/run)");
         write("");
-        write("In review: ExecuTorch, IREE, snnTorch, openpilot.");
+        write("In review: ExecuTorch, snnTorch.");
         write("Details: <a href='" + path("/opensource/") + "'>" + path("/opensource/") + "</a>  ·  try <span class='ok'>git log</span>", "warn");
       },
 

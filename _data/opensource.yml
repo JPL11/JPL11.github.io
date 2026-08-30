@@ -47,6 +47,5 @@ contributions:
     highlights:
       - "PyTorch ExecuTorch: insert buffer write-back copies at the earliest safe point in the exir memory-planning pipeline, with alias-aware placement (#20744)."
       - "snnTorch: fix NaN gradients in the sigmoid surrogate backward pass (#433)."
-      - "openpilot: MetaDrive simulator and CI fixes for fork runners (#38285, #38286)."
     links:
       prs: "https://github.com/pulls?q=is%3Apr+author%3AJPL11+is%3Aopen"
