@@ -1,2 +1,8 @@
-# Papers temporarily hidden — manuscripts are currently in submission / under revision.
-# Add entries here once they are published or available as preprints.
+- title: "A Label-Efficient On-Device QC Agent for MRI Segmentation under Domain Shift"
+  venue: "MedAgent: 2nd Workshop on Agentic AI for Medicine (MICCAI 2026)"
+  status: "Accepted"
+  year: 2026
+  description: "Under domain shift a segmenter can miss a tumor confidently, so QC built on uncertainty inherits a blind spot. This agent instead learns a failure detector over a compact 29-dimensional signature of the segmenter's output, flags likely failures for clinician review, and recalibrates online from the cases that come back reviewed — without ever touching the segmenter's weights. On held-out BraTS-Africa it reaches AUROC 0.91, and reviewing the top-ranked 20% of slices surfaces 48% of all major failures; the numpy-only runtime scores a slice in 88 µs on a 15 W Jetson Orin Nano with model state under 200 KB."
+  tech: ["Medical Imaging", "Edge AI", "Runtime QC", "Domain Shift"]
+  links:
+    github: "https://github.com/JPL11/memory_qc_edge"

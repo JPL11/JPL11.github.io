@@ -84,6 +84,7 @@
 
       projects: function () {
         write("Research projects:", "hdr");
+        write("  0. MemoryQC-Edge — on-device QC agent for MRI segmentation (MICCAI'26 MedAgent, accepted)");
         write("  1. EvCorrupt-Bench — runtime corruption detection for event cameras (in submission)");
         write("  2. SpikeGuard-RC — spiking reservoir safety monitor (in progress)");
         write("  3. evlab + quantcard — open-source tooling (pip installable)");
