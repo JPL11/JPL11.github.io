@@ -20,6 +20,8 @@ nav:
     url: "/"
   - title: "Projects"
     url: "/projects/"
+  - title: "Papers"
+    url: "/papers/"
   - title: "Open Source"
     url: "/opensource/"
   - title: "Experience"
