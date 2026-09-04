@@ -104,7 +104,7 @@
         write("  WebAssembly/binaryen — 3 PRs (MemoryPacking optimizations, fuzzer fix)");
         write("  SpikingJelly         — 3 PRs (STDP autograd memory leaks, ~70 MB/run)");
         write("");
-        write("In review: ExecuTorch, snnTorch.");
+        write("In review: ExecuTorch.");
         write("Details: <a href='" + path("/opensource/") + "'>" + path("/opensource/") + "</a>  ·  try <span class='ok'>git log</span>", "warn");
       },
 
@@ -210,7 +210,9 @@
 
       git: function (args) {
         if ((args[0] || "") !== "log") { write("git: try 'git log'", "err"); return; }
-        write("commit  #432   (snnTorch)              fix: preserve input dtype in neuron", "out");
+        write("commit  #433   (snnTorch)              fix: NaN gradients in sigmoid", "out");
+        write("                                       surrogate backward pass");
+        write("commit  #432   (snnTorch)              fix: preserve input dtype in neuron");
         write("                                       modules and surrogate gradients");
         write("commit db30c15 (WebAssembly/binaryen)  MemoryPacking: optimize overlapping");
         write("                                       segments on imported memories");
@@ -250,7 +252,7 @@
         write("        Host    : GitHub Pages, free tier, proudly");
         write("        Kernel  : vanilla JS, no build step");
         write("        Uptime  : teaching since 2024, researching since 2023");
-        write("        Packages: 2 (pip) + 7 merged PRs (upstream)");
+        write("        Packages: 2 (pip) + 8 merged PRs (upstream)");
         write("        Shell   : this one");
         write("        GPU     : whatever SLURM grants today");
       },

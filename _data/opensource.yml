@@ -36,9 +36,10 @@ contributions:
       prs: "https://github.com/fangwei123456/spikingjelly/pulls?q=is%3Apr+author%3AJPL11"
 
   - project: "snnTorch (spiking neural network framework)"
-    summary: "Merged PR making every neuron module and surrogate gradient dtype-faithful."
+    summary: "Two merged PRs fixing numerical correctness in the neuron modules and surrogate gradients."
     highlights:
       - "All surrogate gradients hard-cast spikes to float32, so float64 networks crashed on the second step of any recurrent neuron (issues #421, #422). Emitting spikes in the input dtype and fixing float32 hidden-state re-initialization in SLSTM/SConv2dLSTM made the full neuron zoo dtype-faithful, backed by 38 new tests parametrized over dtype × module and dtype × surrogate."
+      - "The sigmoid surrogate's backward pass computed exp(-slope·x)/(exp(-slope·x)+1)², which overflows to inf/inf = NaN once the membrane potential sits ~3.5 below threshold at the default slope — silently poisoning the whole backward pass (issue #427). Rewrote it in the numerically stable sigmoid form."
     links:
       prs: "https://github.com/jeshraghian/snntorch/pulls?q=is%3Apr+author%3AJPL11"
 
@@ -46,6 +47,5 @@ contributions:
     summary: "Open PRs across the edge-AI compiler and runtime stack."
     highlights:
       - "PyTorch ExecuTorch: insert buffer write-back copies at the earliest safe point in the exir memory-planning pipeline, with alias-aware placement (#20744)."
-      - "snnTorch: fix NaN gradients in the sigmoid surrogate backward pass (#433)."
     links:
       prs: "https://github.com/pulls?q=is%3Apr+author%3AJPL11+is%3Aopen"
