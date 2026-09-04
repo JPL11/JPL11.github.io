@@ -47,5 +47,6 @@ contributions:
     summary: "Open PRs across the edge-AI compiler and runtime stack."
     highlights:
       - "PyTorch ExecuTorch: insert buffer write-back copies at the earliest safe point in the exir memory-planning pipeline, with alias-aware placement (#20744)."
+      - "Norse: fix ONNX export of neuron models with integer parameter tensors, which aborted the torch 2.13 dynamo exporter — applied uniformly across the neuron zoo with parametrized export tests (#448)."
     links:
       prs: "https://github.com/pulls?q=is%3Apr+author%3AJPL11+is%3Aopen"
