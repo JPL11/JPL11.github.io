@@ -85,12 +85,11 @@
       projects: function () {
         write("Research projects:", "hdr");
         write("  0. MemoryQC-Edge — on-device QC agent for MRI segmentation (MICCAI'26 MedAgent, accepted)");
-        write("  1. EvCorrupt-Bench — runtime corruption detection for event cameras (in submission)");
+        write("  1. EvCorrupt-Bench — runtime corruption detection for event cameras (under revision)");
         write("  2. SpikeGuard-RC — spiking reservoir safety monitor (in progress)");
         write("  3. evlab + quantcard — open-source tooling (pip installable)");
-        write("  4. SNN-GNN Predictive Coding for MRI Representation Learning");
-        write("  5. SpikeAdapt-SC — neuromorphic semantic communication");
-        write("  6. Cosmic-Ray Edge AI on CosmicWatch / CREDO networks");
+        write("  4. SpikeAdapt-SC — neuromorphic semantic communication");
+        write("  5. FedCW — measured FL compression study on real edge hardware (ICAIIC'27 submission)");
         write("");
         write("Full cards: <a href='" + path("/projects/") + "'>" + path("/projects/") + "</a>", "warn");
       },

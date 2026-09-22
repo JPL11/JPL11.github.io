@@ -1,14 +1,15 @@
-- name: "SNN-GNN Predictive Coding for MRI Representation Learning"
-  description: "Semi-supervised MRI framework using SNN-GNN gating with a SpikeFormer backbone to fuse supervised and unsupervised objectives for label-efficient predictive coding."
-  role: "Research"
+- name: "MemoryQC-Edge: Label-Efficient On-Device QC Agent for MRI Segmentation"
+  description: "Under domain shift a segmenter can miss a tumor confidently, so QC built on uncertainty inherits a blind spot. This agent learns a failure detector over a compact 29-dimensional signature of the segmenter's output, flags likely failures for clinician review, and recalibrates online from the cases that come back reviewed, without touching the segmenter's weights. Accepted at the MedAgent workshop (MICCAI 2026)."
+  role: "Research (first author) · MICCAI 2026 MedAgent workshop, accepted"
   highlights:
-    - "Improved representation learning under limited annotations and targeted edge-efficient inference."
-    - "Reduced compute / energy by 90% relative to the dense baseline."
-  tech: ["PyTorch", "SNN", "GNN", "SpikeFormer"]
-  links: {}
+    - "AUROC 0.91 on held-out BraTS-Africa; reviewing the top-ranked 20% of slices surfaces 48% of all major failures."
+    - "numpy-only runtime scores a slice in 88 µs on a 15 W Jetson Orin Nano with model state under 200 KB."
+  tech: ["Medical Imaging", "Edge AI", "Runtime QC", "Domain Shift"]
+  links:
+    github: "https://github.com/JPL11/memory_qc_edge"
 
 - name: "EvCorrupt-Bench: Runtime Corruption Detection for Event Cameras"
-  description: "A benchmark and monitor study for detecting sensor corruption in event-camera streams at runtime: six physically modeled failure modes (leak-event hot pixels, mains flicker, activity bursts, dead regions, readout congestion, polarity faults) injected as timed episodes into 42 recordings across four sensor families, with leakage-safe injection and false-alarm-budgeted evaluation. In submission."
+  description: "A benchmark and monitor study for detecting sensor corruption in event-camera streams at runtime: six physically modeled failure modes (leak-event hot pixels, mains flicker, activity bursts, dead regions, readout congestion, polarity faults) injected as timed episodes into 42 recordings across four sensor families, with leakage-safe injection and false-alarm-budgeted evaluation. Under revision for resubmission."
   role: "Research (first author)"
   highlights:
     - "Grew out of a self-supervised SNN-GNN event denoiser (97% reconstruction accuracy), which now serves as label source and fallback action."
@@ -26,14 +27,16 @@
   tech: ["SNN", "Reservoir Computing", "Event Cameras", "Edge AI"]
   links: {}
 
-- name: "Cosmic-Ray Edge AI on CosmicWatch / CREDO Networks"
-  description: "Exploratory edge-AI pipeline over muon-detector networks: mining coincident CosmicWatch events from the CREDO Elasticsearch archive, building event features, and prototyping tiny MLP / SNN classifiers and a simulation-based GNN for multi-detector fusion, toward federated learning across distributed low-cost detectors."
-  role: "Research"
+- name: "FedCW: What Compression Does an Edge Federation Actually Need?"
+  description: "A measured federated-learning study on real hardware instead of simulation: a desktop, Raspberry Pi 5, Raspberry Pi 4, and Jetson Orin Nano train a shared autoencoder over live Wi-Fi with per-exchange wall-time and byte accounting, on a cosmic-ray sensor-network (CosmicWatch / CREDO) workload. Manuscript prepared for ICAIIC 2027."
+  role: "Research (first author) · ICAIIC 2027 submission"
   highlights:
-    - "Data-readiness tooling for detector uptime, gaps, and coincidence mining across the network archive."
-    - "On-detector-scale models: tiny MLP and pure-PyTorch SNN baselines; GNN prototype for synchronized multi-node fusion."
-  tech: ["PyTorch", "SNN", "GNN", "Elasticsearch", "Physics"]
-  links: {}
+    - "Straggler economics: staleness-weighted asynchronous aggregation reaches 2.4× lower loss at equal wall clock on the most heterogeneous fleet, at a 5.5× higher steady-state wire rate."
+    - "Compression ladder with a recovered floor: naive int8 is the only wire format that degrades beyond run-to-run variation; error-feedback wires (quantized delta, top-k) match fp32 at 73–81% fewer bytes."
+    - "Links decide participation: under emulated LTE / LTE-M / NB-IoT, the compressed wire admits 1.6–3× more updates, and a server-side fp32 → fp16 → delta-int8 policy adapts per connection with no client-side logic."
+  tech: ["PyTorch", "Federated Learning", "Edge AI", "Update Compression", "Raspberry Pi / Jetson"]
+  links:
+    github: "https://github.com/JPL11/CosmicWatch"
 
 - name: "Content-Adaptive Neuromorphic Semantic Communication"
   description: "SpikeAdapt-SC, an SNN-based semantic communication framework for aerial edge AI."
