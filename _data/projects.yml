@@ -38,15 +38,16 @@
   links:
     github: "https://github.com/JPL11/CosmicWatch"
 
-- name: "Content-Adaptive Neuromorphic Semantic Communication"
-  description: "SpikeAdapt-SC, an SNN-based semantic communication framework for aerial edge AI."
-  role: "Research"
+- name: "SpikeAdapt-SC: Adaptive Spiking Semantic Communication over UAV Air-to-Ground Links"
+  description: "Spiking semantic communication for UAV edge inference: binary spike codes carry visual and radar features over a physics-based air-to-ground link (BPSK over Rician fading, validated against its BSC abstraction), and a pilot-driven closed loop jointly selects two training-free rate axes, spatial masking ρ and temporal truncation T′, under a hard per-image payload cap."
+  role: "Research (first author)"
   highlights:
-    - "32–48% estimated computation energy savings via SynOps over MAC-based encoding."
-    - "Reduced payload from 64 KB to 48 KB per image (25% bandwidth savings) with zero accuracy penalty at ρ = 0.75."
-    - "Achieved 96.2% adaptive BSC accuracy vs. 95.8% fixed full-rate; >93% accuracy under severe conditions (BER = 0.3, SNR = −2 dB)."
-  tech: ["PyTorch", "SNN", "Edge AI", "Semantic Communication"]
-  links: {}
+    - "Aerial visual (AID / RESISC45): capacity rules out LDPC-coded JPEG under a 10 mW budget for BER ≥ 0.15, while the binary spike code loses only ≈4 / 6 pp at BER 0.30 (−8.4 dB); the joint loop cuts mission payload to 35–38% at parity with its full-rate checkpoint over 10 seeds, beating single-axis, encoder-matched 1-bit CNN, and HARQ-style policies."
+    - "Radar features (RADIal, frozen FFTRadNet front-end): 58.2 Mbit/frame of pyramid features shipped as 2.3 Mbit of spike maps; detection holds F_H = 0.945 at BER 0.30 where 8-bit features under rate-1/2 and 1/3 LDPC fail past their decoding thresholds; the closed loop reaches mission P̄ = 0.947 at 48.7% lower payload."
+    - "DoA study: a relaxed Ziv–Zakai bound flags the low-SNR threshold the Cramér–Rao bound misses. Measured 10 Hz operation on a Jetson Orin Nano."
+  tech: ["PyTorch", "SNN", "Semantic Communication", "UAV / A2G Channels", "Radar / DoA", "Edge AI"]
+  links:
+    github: "https://github.com/JPL11/SpikeAdapt-SC"
 
 - name: "PokeAgent Speedrun"
   description: "Open-source Pokémon Emerald speedrunning agent with 4 agent scaffolds (four-module, simple, ReAct, ClaudePlays) and a multiprocess emulator/agent architecture for stable long-horizon execution."

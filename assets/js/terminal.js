@@ -88,7 +88,7 @@
         write("  1. EvCorrupt-Bench — runtime corruption detection for event cameras (under revision)");
         write("  2. SpikeGuard-RC — spiking reservoir safety monitor (in progress)");
         write("  3. evlab + quantcard — open-source tooling (pip installable)");
-        write("  4. SpikeAdapt-SC — neuromorphic semantic communication");
+        write("  4. SpikeAdapt-SC — spiking semantic communication over UAV A2G links");
         write("  5. FedCW — measured FL compression study on real edge hardware (ICAIIC'27 submission)");
         write("");
         write("Full cards: <a href='" + path("/projects/") + "'>" + path("/projects/") + "</a>", "warn");
