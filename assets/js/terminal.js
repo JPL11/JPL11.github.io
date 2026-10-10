@@ -103,7 +103,7 @@
         write("  WebAssembly/binaryen — 3 PRs (MemoryPacking optimizations, fuzzer fix)");
         write("  SpikingJelly         — 3 PRs (STDP autograd memory leaks, ~70 MB/run)");
         write("");
-        write("In review: ExecuTorch (approved, awaiting code owner), Norse.");
+        write("In review: ExecuTorch (approved, final CI check), Norse.");
         write("Details: <a href='" + path("/opensource/") + "'>" + path("/opensource/") + "</a>  ·  try <span class='ok'>git log</span>", "warn");
       },
 
@@ -178,7 +178,7 @@
         write("JOBID  PARTITION  NAME                    ST  TIME      NODELIST(REASON)", "hdr");
         write("2601   gpu-h100   spikeguard-rc           R   3-07:12   exp-h100-[03]");
         write("2602   research   evcorrupt-camera-ready  PD  0:00      (ReviewerTwo)");
-        write("2603   upstream   executorch-pr-20744     PD  0:00      (AwaitingCodeOwner)");
+        write("2603   upstream   executorch-pr-20744     PD  0:00      (FinalCICheck)");
         write("2604   upstream   iree-pr-24687           PD  0:00      (AwaitingMaintainer)");
         write("2605   upstream   snntorch-pr-432-433     PD  0:00      (AwaitingMaintainer)");
         write("2606   life       phd-applications        PD  0:00      (BeginTime=Fall-2027)");
