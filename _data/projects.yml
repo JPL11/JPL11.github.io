@@ -7,6 +7,7 @@
   tech: ["Medical Imaging", "Edge AI", "Runtime QC", "Domain Shift"]
   links:
     github: "https://github.com/JPL11/memory_qc_edge"
+    paper: "https://papers.miccai.org/miccai-2026-sat/MedAgent_023.html"
 
 - name: "EvCorrupt-Bench: Runtime Corruption Detection for Event Cameras"
   description: "A benchmark and monitor study for detecting sensor corruption in event-camera streams at runtime: six physically modeled failure modes (leak-event hot pixels, mains flicker, activity bursts, dead regions, readout congestion, polarity faults) injected as timed episodes into 42 recordings across four sensor families, with leakage-safe injection and false-alarm-budgeted evaluation. Under revision for resubmission."
