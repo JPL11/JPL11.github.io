@@ -38,7 +38,6 @@
       "event-cameras/evlab":    "pip install evlab — inspect, corrupt, benchmark",
       "quantization/quantcard": "pip install quantcard — int8/int4 report cards",
       "wasm/binaryen":          "WebAssembly optimizer (3 PRs merged)",
-      "mlir/iree":              "ML compiler stack (1 PR in review)",
       "executorch/exir":        "PyTorch on-device runtime (1 PR merged)",
       "cuda/h100":              "borrowed from SDSC Expanse, please do not tell",
       "latex/rebuttal":         "loads automatically near every deadline"
@@ -78,7 +77,7 @@
         write("Edge AI · Neuromorphic Vision · Compilers/Runtimes for ML");
         write("M.S. Electrical Engineering (in progress) · Adjunct Lecturer, Cal Poly Pomona.");
         write("I work on making event cameras trustworthy (EvCorrupt-Bench, SpikeGuard-RC)");
-        write("and ML deployable at the edge — down to the optimizer passes (Binaryen, IREE,");
+        write("and ML deployable at the edge — down to the optimizer passes (Binaryen,");
         write("ExecuTorch) and the memory leaks in SNN frameworks (SpikingJelly).");
       },
 
@@ -122,7 +121,7 @@
       skills: function () {
         write("Languages   : Python, C/C++, Swift, Objective-C, JS/TS, Kotlin, SQL");
         write("ML / AI     : PyTorch, SNNs (SpikingJelly/snnTorch), torchao, RAG, LLM agents");
-        write("Compilers   : Binaryen/WebAssembly, MLIR/IREE, ExecuTorch exir passes");
+        write("Compilers   : Binaryen/WebAssembly, ExecuTorch exir passes");
         write("Event vision: evlab, corruption modeling, denoising, voxel/time-surface reps");
         write("Embedded    : STM32, ARM Cortex-M, Raspberry Pi 5, Jetson, Zephyr RTOS");
         write("Infra       : Git/GitHub, CI/CD, SLURM (SDSC Expanse), Linux, Docker");
@@ -180,10 +179,9 @@
         write("JOBID  PARTITION  NAME                    ST  TIME      NODELIST(REASON)", "hdr");
         write("2601   gpu-h100   spikeguard-rc           R   3-07:12   exp-h100-[03]");
         write("2602   research   evcorrupt-camera-ready  PD  0:00      (ReviewerTwo)");
-        write("2604   upstream   iree-pr-24687           PD  0:00      (AwaitingMaintainer)");
         write("2606   life       phd-applications        PD  0:00      (BeginTime=Fall-2027)");
         write("");
-        write("4 jobs; 1 running, 3 pending. Such is research.", "warn");
+        write("3 jobs; 1 running, 2 pending. Such is research.", "warn");
       },
 
       sbatch: function (args) {
