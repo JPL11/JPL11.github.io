@@ -34,7 +34,7 @@
     var MODULES = {
       "pytorch/2.13":           "deep learning workhorse",
       "snn/spikingjelly":       "spiking neural nets (3 PRs merged upstream)",
-      "snn/snntorch":           "more spikes (2 PRs in review)",
+      "snn/snntorch":           "more spikes (2 PRs merged)",
       "event-cameras/evlab":    "pip install evlab — inspect, corrupt, benchmark",
       "quantization/quantcard": "pip install quantcard — int8/int4 report cards",
       "wasm/binaryen":          "WebAssembly optimizer (3 PRs merged)",
@@ -100,9 +100,10 @@
         write("  <span class='ok'>quantcard</span> — quantization report cards for edge-bound PyTorch models");
         write("");
         write("Merged upstream:", "hdr");
+        write("  PyTorch ExecuTorch   — 1 PR (earliest-safe buffer write-backs in exir)");
         write("  WebAssembly/binaryen — 3 PRs (MemoryPacking optimizations, fuzzer fix)");
         write("  SpikingJelly         — 3 PRs (STDP autograd memory leaks, ~70 MB/run)");
-        write("  PyTorch ExecuTorch   — 1 PR (earliest-safe buffer write-backs in exir)");
+        write("  snnTorch             — 2 PRs (dtype faithfulness, NaN-free sigmoid surrogate)");
         write("");
         write("In review: Norse.");
         write("Details: <a href='" + path("/opensource/") + "'>" + path("/opensource/") + "</a>  ·  try <span class='ok'>git log</span>", "warn");
@@ -180,10 +181,9 @@
         write("2601   gpu-h100   spikeguard-rc           R   3-07:12   exp-h100-[03]");
         write("2602   research   evcorrupt-camera-ready  PD  0:00      (ReviewerTwo)");
         write("2604   upstream   iree-pr-24687           PD  0:00      (AwaitingMaintainer)");
-        write("2605   upstream   snntorch-pr-432-433     PD  0:00      (AwaitingMaintainer)");
         write("2606   life       phd-applications        PD  0:00      (BeginTime=Fall-2027)");
         write("");
-        write("5 jobs; 1 running, 4 pending. Such is research.", "warn");
+        write("4 jobs; 1 running, 3 pending. Such is research.", "warn");
       },
 
       sbatch: function (args) {
