@@ -43,10 +43,17 @@ contributions:
     links:
       prs: "https://github.com/jeshraghian/snntorch/pulls?q=is%3Apr+author%3AJPL11"
 
+  - project: "PyTorch ExecuTorch (on-device inference runtime)"
+    summary: "One merged PR in the exir export pipeline that shortens buffer live ranges for the memory planner."
+    highlights:
+      - "Buffer write-back copy_ nodes were always appended at the end of the graph, keeping every mutated buffer's new value alive for the whole program. Moved each write-back to the earliest point where it is provably safe (#20744), preserving end-of-graph semantics exactly."
+      - "Placement is alias-aware: views, in-place ops, reinplace storage-sharing annotations, and destinations that may alias each other all force a conservative end-of-graph fallback, backed by ~200 lines of new tests. Approved by the exir code owner."
+    links:
+      prs: "https://github.com/pytorch/executorch/pull/20744"
+
   - project: "In review"
     summary: "Open PRs across the edge-AI compiler and runtime stack."
     highlights:
-      - "PyTorch ExecuTorch: insert buffer write-back copies at the earliest safe point in the exir memory-planning pipeline, with alias-aware placement (#20744). Approved by the exir code owner; final CI check before merge."
       - "Norse: fix ONNX export of neuron models with integer parameter tensors, which aborted the torch 2.13 dynamo exporter — applied uniformly across the neuron zoo with parametrized export tests (#448)."
     links:
       prs: "https://github.com/pulls?q=is%3Apr+author%3AJPL11+is%3Aopen"

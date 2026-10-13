@@ -39,7 +39,7 @@
       "quantization/quantcard": "pip install quantcard — int8/int4 report cards",
       "wasm/binaryen":          "WebAssembly optimizer (3 PRs merged)",
       "mlir/iree":              "ML compiler stack (1 PR in review)",
-      "executorch/exir":        "PyTorch on-device runtime (1 PR approved, awaiting merge)",
+      "executorch/exir":        "PyTorch on-device runtime (1 PR merged)",
       "cuda/h100":              "borrowed from SDSC Expanse, please do not tell",
       "latex/rebuttal":         "loads automatically near every deadline"
     };
@@ -102,8 +102,9 @@
         write("Merged upstream:", "hdr");
         write("  WebAssembly/binaryen — 3 PRs (MemoryPacking optimizations, fuzzer fix)");
         write("  SpikingJelly         — 3 PRs (STDP autograd memory leaks, ~70 MB/run)");
+        write("  PyTorch ExecuTorch   — 1 PR (earliest-safe buffer write-backs in exir)");
         write("");
-        write("In review: ExecuTorch (approved, final CI check), Norse.");
+        write("In review: Norse.");
         write("Details: <a href='" + path("/opensource/") + "'>" + path("/opensource/") + "</a>  ·  try <span class='ok'>git log</span>", "warn");
       },
 
@@ -178,12 +179,11 @@
         write("JOBID  PARTITION  NAME                    ST  TIME      NODELIST(REASON)", "hdr");
         write("2601   gpu-h100   spikeguard-rc           R   3-07:12   exp-h100-[03]");
         write("2602   research   evcorrupt-camera-ready  PD  0:00      (ReviewerTwo)");
-        write("2603   upstream   executorch-pr-20744     PD  0:00      (FinalCICheck)");
         write("2604   upstream   iree-pr-24687           PD  0:00      (AwaitingMaintainer)");
         write("2605   upstream   snntorch-pr-432-433     PD  0:00      (AwaitingMaintainer)");
         write("2606   life       phd-applications        PD  0:00      (BeginTime=Fall-2027)");
         write("");
-        write("6 jobs; 1 running, 5 pending. Such is research.", "warn");
+        write("5 jobs; 1 running, 4 pending. Such is research.", "warn");
       },
 
       sbatch: function (args) {
@@ -209,7 +209,9 @@
 
       git: function (args) {
         if ((args[0] || "") !== "log") { write("git: try 'git log'", "err"); return; }
-        write("commit  #433   (snnTorch)              fix: NaN gradients in sigmoid", "out");
+        write("commit 6cc8edf (pytorch/executorch)    Insert write-back copy_ nodes at the", "out");
+        write("                                       earliest safe point");
+        write("commit  #433   (snnTorch)              fix: NaN gradients in sigmoid");
         write("                                       surrogate backward pass");
         write("commit  #432   (snnTorch)              fix: preserve input dtype in neuron");
         write("                                       modules and surrogate gradients");
@@ -251,7 +253,7 @@
         write("        Host    : GitHub Pages, free tier, proudly");
         write("        Kernel  : vanilla JS, no build step");
         write("        Uptime  : teaching since 2024, researching since 2023");
-        write("        Packages: 2 (pip) + 8 merged PRs (upstream)");
+        write("        Packages: 2 (pip) + 9 merged PRs (upstream)");
         write("        Shell   : this one");
         write("        GPU     : whatever SLURM grants today");
       },
