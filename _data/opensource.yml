@@ -47,7 +47,7 @@ contributions:
     summary: "One merged PR in the exir export pipeline that shortens buffer live ranges for the memory planner."
     highlights:
       - "Buffer write-back copy_ nodes were always appended at the end of the graph, keeping every mutated buffer's new value alive for the whole program. Moved each write-back to the earliest point where it is provably safe (#20744), preserving end-of-graph semantics exactly."
-      - "Placement is alias-aware: views, in-place ops, reinplace storage-sharing annotations, and destinations that may alias each other all force a conservative end-of-graph fallback, backed by ~200 lines of new tests. Approved by the exir code owner."
+      - "Placement is alias-aware: each copy waits for every read of the buffer's old value and every mutation of the value being written, through views, in-place ops and storage-sharing ops, with unknown ops treated conservatively. If two write-backs might alias each other, all of them fall back to end-of-graph in their original order. Approved by the exir code owner."
     links:
       prs: "https://github.com/pytorch/executorch/pull/20744"
 
