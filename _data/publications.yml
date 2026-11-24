@@ -1,3 +1,11 @@
+- title: "Does Certified Semantic Communication Survive Model Compression?"
+  venue: "ICNC 2027 (International Conference on Computing, Networking and Communications)"
+  status: "Accepted"
+  year: 2027
+  description: "Certified semantic communication adapts its transmission rate under a distribution-free conformal guarantee — but that guarantee only covers the model that was calibrated. This paper measures what happens when the model is compressed afterwards. INT8 and INT4 heads stay within the risk allowance, while binary quantization, 2-bit students and quantized rankings miscover at 0.31–0.62. Binary students distilled at temperature 1 are the dangerous case: they match full-precision accuracy and pass a rank-correlation check while miscovering at 0.26, though a distribution-based witness catches them. Recalibration restores every variant to nominal coverage."
+  tech: ["Semantic Communication", "Conformal Prediction", "Quantization", "Event Cameras"]
+  links: {}
+
 - title: "A Label-Efficient On-Device QC Agent for MRI Segmentation under Domain Shift"
   venue: "MedAgent: 2nd Workshop on Agentic AI for Medicine (MICCAI 2026)"
   status: "Accepted"
