@@ -143,6 +143,7 @@
       social: function () {
         write("GitHub  : <a href='https://github.com/JPL11' target='_blank' rel='noopener'>github.com/JPL11</a>");
         write("LinkedIn: <a href='https://www.linkedin.com/jackypli' target='_blank' rel='noopener'>linkedin.com/jackypli</a>");
+        write("Scholar : <a href='https://scholar.google.com/citations?user=xMu2148AAAAJ&hl=en' target='_blank' rel='noopener'>scholar.google.com/citations?user=xMu2148AAAAJ</a>");
         write("PyPI    : evlab · quantcard (pip install either)");
       },
 
